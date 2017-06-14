@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>padiab Calculator</title>
+    <script type="text/javascript">
+//This function belong to plus operator
+        function Plus(num1 , num2){
+            return num1 + num2;
+        }
+        // why this function cant specify "a" and "b" variables as a number?
+        function plusResult () {
+            var a = numInput1.value;
+            var b = numInput2.value;
+            textResult.value = Plus( a , b);
+        }
+// This function is belong to multiple operator
+        function Multiple(num1 , num2){
+            return num1 * num2;
+        }
+        function multipleResult () {
+            var a = numInput1.value;
+            var b = numInput2.value;
+            textResult.value = Multiple( a , b);
+        }
+// This function is belong to subtract operator
+        function Subtract(num1 , num2){
+             return num1 - num2;
+        }
+        function subtractResult () {
+            var a = numInput1.value;
+            var b = numInput2.value;
+            textResult.value = Subtract(a, b);
+        }
+// This function is belong to divided operator
+        function Divided (num1 , num2){
+            return num1 / num2;
+        }
+        function dividedResult () {
+            var a = numInput1.value;
+            var b = numInput2.value;
+            textResult.value = Divided( a , b);
+        }
+// this function do power that num1 ^ num2
+        function power (){
+           var sum = 1;
+           var n =numInput1.value;
+           for ( var i =numInput2.value ; i>0 ; i--) {
+            sum = sum * n ;
+            }
+          textResult.value = sum;
+        }
+
+    </script>
+
+</head>
+<body>
+
+<p> please enter your number 1</p><br>
+<input id="numInput1" type="number"/><br>
+<p>please enter your number 2</p>
+<input id="numInput2" type="number"><br>
+<input type="button" name="clickMe" onclick="plusResult()" value="Plus">
+<input type="button" name="clickMe" onclick="subtractResult()" value="Subtract"><br>
+<input type="button" name="clickMe" onclick="multipleResult()" value="Multiple">
+<input type="button" name="clickMe" onclick="dividedResult()" value="Divided"><br>
+<input type="button" name="clickMe" onclick="power()" value="Power"><br><br>
+<input type="number" id="textResult">
+
+
+</body>
+</html>
